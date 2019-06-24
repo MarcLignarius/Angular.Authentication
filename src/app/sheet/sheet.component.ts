@@ -17,6 +17,16 @@ export class SheetComponent implements AfterViewInit {
   @Input() public height = 400;
   
   private context: CanvasRenderingContext2D;
+  private black = '000';
+  private red = '#FF0000';
+  private yellow = '#FFFF00';
+  private orange = '#FFA500';
+  private green = '	#00FF00';
+  private blue = '#0000FF';
+  private purple = '#4B0082';
+  private currentColor = this.black;
+  
+
   constructor() { }
   
   public ngAfterViewInit() {
@@ -27,7 +37,7 @@ export class SheetComponent implements AfterViewInit {
     // set some default properties about the line
     this.context.lineWidth = 3;
     this.context.lineCap = 'round';
-    this.context.strokeStyle = '#000';
+    this.context.strokeStyle = this.currentColor;
     this.captureEvents(canvasEl);
   }
 

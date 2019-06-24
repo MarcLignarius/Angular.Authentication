@@ -1,4 +1,19 @@
-<p>
-  sheet works!
-</p>
-<canvas #canvas></canvas>
+
+<div id="sheet">
+  <div class="draw">
+    <h1>Draw the phrase!</h1>
+    <canvas #canvas></canvas>
+    <button>Black</button>
+    <button ng-click="currentColor = red">Red</button>
+    <button>Orange</button>
+    <button>Yellow</button>
+    <button>Green</button>
+    <button>Blue</button>
+    <button>Purple</button>
+
+  </div>
+  <div class="write">
+    <h1>Describe the drawing!</h1>
+    <textarea name="description" id="description" cols="35" rows="3" maxlength="140"></textarea>
+  </div>
+</div>
