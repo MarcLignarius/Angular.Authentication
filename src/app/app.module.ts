@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
+import { SplashComponent } from './splash/splash.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SplashComponent
   ],
   imports: [
     BrowserModule,
