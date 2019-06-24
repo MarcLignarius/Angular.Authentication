@@ -7,12 +7,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SplashComponent } from './splash/splash.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { PlayerListComponent } from './player-list/player-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SplashComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    PlayerListComponent
   ],
   imports: [
     BrowserModule,

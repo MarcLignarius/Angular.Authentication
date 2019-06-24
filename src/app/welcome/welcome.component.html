@@ -1,11 +1,8 @@
 <h1>Telestrations</h1>
-<form action="">
+<!-- navbar -->
+<app-player-list></app-player-list>
+<form>
     <label for='newPlayer'>New Player:</label><br>
     <input #newPlayer>
     <button (click)="submitForm(newPlayer.value); newPlayer.value=''">Add Player</button>
-    <h3>Players added:</h3>
-    <div *ngFor="let player of players" class="panel panel-default">
-        <p>{{player[0]['name']}}</p>
-    </div>
-    <button (click)="submitForm(newPlayer.value); newPlayer.value=''">Start Game</button>
 </form>

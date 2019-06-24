@@ -18,6 +18,7 @@ export class WelcomeComponent implements OnInit {
   submitForm(name: string) {
     var newPlayer: Player = new Player(name);
     this.playerService.addPlayer(newPlayer);
+    console.log("Welcome New-",newPlayer);
   }
 
 
