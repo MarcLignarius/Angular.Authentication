@@ -27,14 +27,7 @@ export class EmailComponent implements OnInit {
 onSubmit(formData) {
   if(formData.valid) {
     console.log(formData.value);
-    this.af.auth.login({
-      email: formData.value.email,
-      password: formData.value.password
-    },
-    {
-      provider: AuthProviders.Password,
-      method: AuthMethods.Password,
-    }).then(
+    this.af.auth.signInWithEmailAndPassword(formData.value.email, formData.value.password).then(
       (success) => {
       console.log(success);
       this.router.navigate(['/members']);
