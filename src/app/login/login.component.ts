@@ -15,15 +15,15 @@ export class LoginComponent implements OnInit {
   error: any;
   constructor(public af: AngularFireAuthModule, private router: Router) {
 
-    this.af.authState.subscribe(authState => { 
-    if(authState) {
+    this.af.auth.subscribe(auth => { 
+    if(auth) {
       this.router.navigateByUrl('/members');
     }
   });
 }
 
 loginGoogle() {
-  this.af.authState.login({
+  this.af.auth.login({
     provider: AuthProviders.Google,
     method: AuthMethods.Popup,
   }).then(
