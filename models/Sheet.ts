@@ -1,3 +1,8 @@
 export class Sheet {
-    constructor(public writing: string, public drawingUrl: string) {}
+    writing: string = '';
+    drawingUrl: string = '';
+    
+    constructor() {}
+
+
 }
