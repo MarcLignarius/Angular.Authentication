@@ -9,6 +9,10 @@ import { SplashComponent } from './splash/splash.component';
 import { SheetComponent } from './sheet/sheet.component';
 
 import { AngularFireModule } from 'angularfire2';
+import { LoginComponent } from './login/login.component';
+import { EmailComponent } from './email/email.component';
+import { SignupComponent } from './signup/signup.component';
+import { MembersComponent } from './members/members.component';
 
 export const firebaseConfig = {
   apiKey: '',
@@ -22,7 +26,12 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     SplashComponent,
-    SheetComponent
+    SheetComponent,
+    AngularFireModule.initializeApp(firebaseConfig),
+    LoginComponent,
+    EmailComponent,
+    SignupComponent,
+    MembersComponent
   ],
   imports: [
     BrowserModule,
