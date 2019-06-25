@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
-import { Player } from "models/Player";
+import { Player } from '../../../models/Player';
 import { PlayerService } from '../player.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 

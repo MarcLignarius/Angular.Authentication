@@ -26,3 +26,10 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+##Souces
+
+Canvas component functionality gained witht the help of : 
+* _https://medium.com/@tarik.nzl/creating-a-canvas-component-with-free-hand-drawing-with-rxjs-and-angular-61279f577415_
+
+* _http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/#demo-complete_
