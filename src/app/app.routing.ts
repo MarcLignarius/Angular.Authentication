@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PlayerListComponent } from './player-list/player-list.component';
 import { ProfileComponent } from './profile/profile.component';
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth.service';
@@ -18,6 +17,7 @@ const appRoutes: Routes = [
         path: '',
         redirectTo: 'login',
         pathMatch: 'full'
+
     },
     {
         path: 'playerlist',
@@ -44,10 +44,6 @@ const appRoutes: Routes = [
          component: MembersComponent, 
          canActivate: [AuthGuard] 
     }
-
-
-
-
  ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
