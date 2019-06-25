@@ -15,17 +15,14 @@ export class SignupComponent implements OnInit {
   state: string = '';
   error: any;
 
-  constructor(public af: AngularFire,private router: Router) {
+  constructor(public af: AngularFireAuth,private router: Router) {
 
   }
 
   onSubmit(formData) {
     if(formData.valid) {
       console.log(formData.value);
-      this.af.auth.createUser({
-        email: formData.value.email,
-        password: formData.value.password
-      }).then(
+      this.af.auth.createUserWithEmailAndPassword(formData.value.email, formData.value.password).then(
         (success) => {
         console.log(success);
         this.router.navigate(['/login'])
