@@ -39,7 +39,7 @@ export class SheetComponent implements AfterViewInit {
     this.context.lineCap = 'round';
     this.captureEvents(canvasEl);
   }
-  //!!!! THIS NEEDS TO BE UPDATED TO PUSH THE IMG TO THE PLAYER
+  //!!!! THIS NEEDS TO BE UPDATED TO PUSH THE IMG TO THE PLAYER AND PROB ROUTE TO NEXT PAGE OR SOMETHING
   private saveDrawing() {
     const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;
     let drawingUrl = canvasEl.toDataURL();
