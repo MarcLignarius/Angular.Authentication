@@ -6,4 +6,10 @@ export class Game {
     getPlayerCount() {
         this.turns
     }
+
+    startPlayers() {
+        this.players.forEach(player => {
+            player.createChainAndSheets();
+        });
+    }
 }
