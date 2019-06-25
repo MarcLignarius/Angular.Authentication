@@ -12,6 +12,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
+import { AuthService } from './auth.service';
+import { routing } from './app.routing';
+
 
 export const firebaseConfig = {
   apiKey: '',
