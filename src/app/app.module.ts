@@ -8,6 +8,16 @@ import { AppComponent } from './app.component';
 import { SplashComponent } from './splash/splash.component';
 import { SheetComponent } from './sheet/sheet.component';
 
+import { AngularFireModule } from 'angularfire2';
+
+export const firebaseConfig = {
+  apiKey: '',
+  authDomain: '',
+  databaseURL: '',
+  storageBucket: '',
+  messagingSenderId: ''
+};
+
 @NgModule({
   declarations: [
     AppComponent,
