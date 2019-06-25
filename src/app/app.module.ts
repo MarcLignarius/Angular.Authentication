@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SplashComponent } from './splash/splash.component';
+import { SheetComponent } from './sheet/sheet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SplashComponent
+    SplashComponent,
+    SheetComponent
   ],
   imports: [
     BrowserModule,
