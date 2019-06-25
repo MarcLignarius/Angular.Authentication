@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Player } from '../../../models/Player';
@@ -12,8 +12,9 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
   providers: [PlayerService]
 })
 export class ProfileComponent implements OnInit {
-  playerId: string;
   profileToDisplay;
+  playerId: string;
+  
 
   constructor(private route: ActivatedRoute, private location: Location, private PlayerService: PlayerService) { }
 

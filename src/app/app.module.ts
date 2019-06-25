@@ -14,6 +14,7 @@ import { firebaseConfig } from '../api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { ProfileComponent } from './profile/profile.component';
+import { CurrentGameComponent } from './current-game/current-game.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProfileComponent } from './profile/profile.component';
     RulesComponent,
     WelcomeComponent,
     PlayerListComponent,
-    ProfileComponent
+    ProfileComponent,
+    CurrentGameComponent
   ],
   imports: [
     BrowserModule,

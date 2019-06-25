@@ -1,9 +1,10 @@
-    
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PlayerListComponent } from './player-list/player-list.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RulesComponent } from './rules/rules.component';
+import { CurrentGameComponent } from './current-game/current-game.component';
 
 const appRoutes: Routes = [
     {
@@ -15,8 +16,16 @@ const appRoutes: Routes = [
         component: PlayerListComponent
     },
     {
-        path: 'playerlists/:id',
+        path: 'players/:$key',
         component: ProfileComponent
+    },
+    {
+        path: 'rules',
+        component: RulesComponent
+    },
+    {
+        path: 'players/:$key/game',
+        component: CurrentGameComponent
     }
 
 
