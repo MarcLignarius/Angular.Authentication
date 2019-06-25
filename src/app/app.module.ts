@@ -15,6 +15,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { ProfileComponent } from './profile/profile.component';
 import { CurrentGameComponent } from './current-game/current-game.component';
+import { PreviousComponent } from './previous/previous.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CurrentGameComponent } from './current-game/current-game.component';
     WelcomeComponent,
     PlayerListComponent,
     ProfileComponent,
-    CurrentGameComponent
+    CurrentGameComponent,
+    PreviousComponent
   ],
   imports: [
     BrowserModule,
