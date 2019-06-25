@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { Player } from "models/Player";
 
 
+
 @Injectable()
 export class PlayerService {
 
@@ -10,9 +11,9 @@ export class PlayerService {
   }
 
   addPlayer(newPlayer: Player) {
+    console.log(newPlayer);
+    
     this.players.push(newPlayer);
-    this.getPlayers();
-    console.log(this.players);
   }
 
   getPlayers(){

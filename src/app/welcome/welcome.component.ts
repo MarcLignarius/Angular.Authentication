@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from 'models/Player';
 import { PlayerService } from '../player.service';
-
+ 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
@@ -18,7 +18,6 @@ export class WelcomeComponent implements OnInit {
   submitForm(name: string) {
     var newPlayer: Player = new Player(name);
     this.playerService.addPlayer(newPlayer);
-    console.log("Welcome New-",newPlayer);
   }
 
 
