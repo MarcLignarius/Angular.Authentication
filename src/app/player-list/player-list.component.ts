@@ -22,10 +22,12 @@ export class PlayerListComponent implements OnInit {
 
   ngOnInit() {
     this.playersList = this.playerService.getPlayers();
+    console.log(this.playersList);
+    
   }
 
   goToPlayerProfile(clickedPlayer) {
-    this.router.navigate(['players', clickedPlayer.$key]);
+    this.router.navigate(['players', clickedPlayer]);
   }
 
 }
