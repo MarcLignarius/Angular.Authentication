@@ -52,6 +52,13 @@ export class SheetComponent implements AfterViewInit {
     .pipe(
       switchMap((e) => {
         this.context.strokeStyle = this.currentColor;
+        if (this.currentColor === '#FFFFFF') {
+          this.context.lineWidth = 15;
+          console.log('bigger');
+        } else {
+          this.context.lineWidth = 3;
+          console.log('smaller');
+        }
         // after a mouse down, we'll record all mouse moves
           return fromEvent(canvasEl, 'mousemove')
             .pipe(
