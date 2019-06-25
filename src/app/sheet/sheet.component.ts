@@ -21,14 +21,11 @@ export class SheetComponent implements AfterViewInit {
   
   public currentColor;
   
-  // public colorControllor(value) {
-  //   this.currentColor = value;
-  //   }
-  
-  changeColor(hexcode: string) {
+  private changeColor(hexcode: string) {
     this.currentColor = hexcode;
     console.log(this.currentColor)
   }
+
   constructor() { }
   
   public ngAfterViewInit() {
@@ -41,6 +38,12 @@ export class SheetComponent implements AfterViewInit {
     this.context.lineWidth = 3;
     this.context.lineCap = 'round';
     this.captureEvents(canvasEl);
+  }
+  //!!!! THIS NEEDS TO BE UPDATED TO PUSH THE IMG TO THE PLAYER
+  private saveDrawing() {
+    const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;
+    let drawingUrl = canvasEl.toDataURL();
+    console.log(drawingUrl);
   }
   
   private captureEvents(canvasEl: HTMLCanvasElement) {
