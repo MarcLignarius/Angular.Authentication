@@ -12,13 +12,15 @@ import { PlayerListComponent } from './player-list/player-list.component';
 import { firebaseConfig } from '../api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SplashComponent,
     WelcomeComponent,
-    PlayerListComponent
+    PlayerListComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
