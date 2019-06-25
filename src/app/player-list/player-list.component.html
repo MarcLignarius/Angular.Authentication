@@ -1,6 +1,5 @@
-<div *ngFor="let player of players | async" class="panel panel-default">
-  <input type="checkbox" name="player[(players.length-1)]" value="option[players.length-1]"><br>
-</div>
+<ul *ngFor="let player of players" class="panel panel-default">
+  <li><input type="checkBox" name="{{player.name}}" value="{{player.$key}}">{{player.name}}</li>
+</ul>
 
-<button>Add Player</button>
-<button>Start Game</button>
+
