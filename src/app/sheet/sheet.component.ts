@@ -1,6 +1,7 @@
 import { Component, Input, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 import { fromEvent } from 'rxjs/observable/fromEvent';
 import { switchMap, takeUntil, pairwise } from 'rxjs/operators';
+import * as $ from 'jquery';
 
 
 @Component({
@@ -17,16 +18,17 @@ export class SheetComponent implements AfterViewInit {
   @Input() public height = 400;
   
   private context: CanvasRenderingContext2D;
-  private black = '000';
-  private red = '#FF0000';
-  private yellow = '#FFFF00';
-  private orange = '#FFA500';
-  private green = '	#00FF00';
-  private blue = '#0000FF';
-  private purple = '#4B0082';
-  private currentColor = this.black;
   
-
+  public currentColor;
+  
+  // public colorControllor(value) {
+  //   this.currentColor = value;
+  //   }
+  
+  changeColor(hexcode: string) {
+    this.currentColor = hexcode;
+    console.log(this.currentColor)
+  }
   constructor() { }
   
   public ngAfterViewInit() {
@@ -34,19 +36,20 @@ export class SheetComponent implements AfterViewInit {
     this.context = canvasEl.getContext('2d');
     canvasEl.width = this.width;
     canvasEl.height = this.height;
+    this.context.strokeStyle = '000';
     // set some default properties about the line
     this.context.lineWidth = 3;
     this.context.lineCap = 'round';
-    this.context.strokeStyle = this.currentColor;
     this.captureEvents(canvasEl);
   }
-
+  
   private captureEvents(canvasEl: HTMLCanvasElement) {
     // this will capture all mousedown events from the canvas element
     fromEvent(canvasEl, 'mousedown')
-      .pipe(
-        switchMap((e) => {
-          // after a mouse down, we'll record all mouse moves
+    .pipe(
+      switchMap((e) => {
+        this.context.strokeStyle = this.currentColor;
+        // after a mouse down, we'll record all mouse moves
           return fromEvent(canvasEl, 'mousemove')
             .pipe(
               // we'll stop (and unsubscribe) once the user releases the mouse

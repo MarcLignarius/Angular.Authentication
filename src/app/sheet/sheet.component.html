@@ -2,14 +2,14 @@
 <div id="sheet">
   <div class="draw">
     <h1>Draw the phrase!</h1>
-    <canvas #canvas></canvas>
-    <button>Black</button>
-    <button ng-click="currentColor = red">Red</button>
-    <button>Orange</button>
-    <button>Yellow</button>
-    <button>Green</button>
-    <button>Blue</button>
-    <button>Purple</button>
+    <canvas #canvas></canvas><br>
+    <button (click)="changeColor('#000000')">Black</button>
+    <button (click)="changeColor('#FF0000')">Red</button>
+    <button (click)="changeColor('#FFA500')">Orange</button>
+    <button (click)="changeColor('#FFFF00')">Yellow</button>
+    <button (click)="changeColor('#00FF00')">Green</button>
+    <button (click)="changeColor('#0000FF')">Blue</button>
+    <button (click)="changeColor('#4B0082')">Purple</button>   
 
   </div>
   <div class="write">
