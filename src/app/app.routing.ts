@@ -31,9 +31,13 @@ const appRoutes: Routes = [
         component: LoginComponent 
     },
     {
-         path: 'signup', component: SignupComponent },
+         path: 'signup', 
+         component: SignupComponent 
+    },
     {
-         path: 'login-email', component: EmailComponent },
+         path: 'login-email', 
+         component: EmailComponent 
+    },
     {
          path: 'members',
          component: MembersComponent, 
