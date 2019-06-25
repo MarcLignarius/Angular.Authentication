@@ -7,7 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { AuthService } from './auth.service';
+import { AuthGuard } from './auth.service';
 import { SignupComponent } from './signup/signup.component';
 import { EmailComponent } from './email/email.component';
 import { MembersComponent } from './members/members.component';
@@ -16,7 +16,8 @@ import { MembersComponent } from './members/members.component';
 const appRoutes: Routes = [
     {
         path: '',
-        component: WelcomeComponent
+        redirectTo: 'login',
+        pathMatch: 'full'
     },
     {
         path: 'playerlist',
@@ -41,7 +42,7 @@ const appRoutes: Routes = [
     {
          path: 'members',
          component: MembersComponent, 
-         canActivate: [AuthService] 
+         canActivate: [AuthGuard] 
     }
 
 

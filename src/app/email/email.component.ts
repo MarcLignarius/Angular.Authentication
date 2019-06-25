@@ -2,7 +2,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuth} from 'angularfire2/auth';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
-import firebase from 'firebase/app';
+import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
 
 @Component({

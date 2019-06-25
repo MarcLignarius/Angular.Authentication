@@ -2,7 +2,6 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuth} from 'angularfire2/auth';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
-import firebase from 'firebase/app';
 import { Router } from '@angular/router';
 
 @Component({
@@ -30,7 +29,6 @@ export class MembersComponent implements OnInit {
      console.log('logged out');
      this.router.navigateByUrl('/login');
   }
-
 
   ngOnInit() {
   }
