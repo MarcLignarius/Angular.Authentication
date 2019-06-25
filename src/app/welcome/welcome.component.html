@@ -1,0 +1,6 @@
+<h1>Telestrations</h1>
+<form>
+    <label for='newPlayer'>New Player:</label><br>
+    <input #newPlayer>
+    <button (click)="submitForm(newPlayer.value); newPlayer.value=''">Add Player</button>
+</form>

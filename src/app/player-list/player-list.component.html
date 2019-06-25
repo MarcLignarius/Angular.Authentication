@@ -1,0 +1,4 @@
+<ul *ngFor="let player of playersList | async" class="panel panel-default">
+    <li (click)="goToPlayerProfile(player.$key)">{{player.$key}}</li>
+</ul>
+
