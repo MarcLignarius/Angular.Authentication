@@ -7,12 +7,16 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SplashComponent } from './splash/splash.component';
 import { SheetComponent } from './sheet/sheet.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RulesComponent } from './rules/rules.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SplashComponent,
-    SheetComponent
+    SheetComponent,
+    NavbarComponent,
+    RulesComponent
   ],
   imports: [
     BrowserModule,
