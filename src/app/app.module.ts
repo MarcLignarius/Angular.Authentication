@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { masterFirebaseConfig } from '../api-keys';
+import { masterFirebaseConfig } from '../environments/api-keys';
 
 
 import { AppComponent } from './app.component';
@@ -14,7 +14,9 @@ import { SignupComponent } from './signup/signup.component';
 import { EmailComponent } from './email/email.component';
 import { MembersComponent } from './members/members.component';
 import { PlayerListComponent } from './player-list/player-list.component';
-import { ProfileComponent } from './profile/profile.component';
+import { RulesComponent } from './rules/rules.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
