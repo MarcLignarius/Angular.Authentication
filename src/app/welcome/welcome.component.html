@@ -1,12 +1,6 @@
 <h1>Telestrations</h1>
-<!-- navbar -->
-
 <form>
     <label for='newPlayer'>New Player:</label><br>
     <input #newPlayer>
     <button (click)="submitForm(newPlayer.value); newPlayer.value=''">Add Player</button>
 </form>
-
-<div>
-    <app-player-list></app-player-list>
-</div>

@@ -23,6 +23,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AuthGuard } from './auth.service';
 import { routing } from './app.routing';
 import { Profile } from 'selenium-webdriver/firefox';
+import { ProfileComponent } from './profile/profile.component';
+import { CurrentGameComponent } from './current-game/current-game.component';
+import { PreviousComponent } from './previous/previous.component';
 
 
 export const firebaseConfig = {
@@ -31,6 +34,7 @@ export const firebaseConfig = {
   databaseURL: masterFirebaseConfig.databaseURL,
   storageBucket: masterFirebaseConfig.storageBucket
 };
+
 
 @NgModule({
   declarations: [
@@ -45,7 +49,9 @@ export const firebaseConfig = {
     RulesComponent,
     WelcomeComponent,
     PlayerListComponent,
-    ProfileComponent
+    ProfileComponent,
+    CurrentGameComponent,
+    PreviousComponent
   ],
   imports: [
     AngularFireModule.initializeApp(firebaseConfig),

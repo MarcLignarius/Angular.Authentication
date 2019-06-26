@@ -1,4 +1,3 @@
-    
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -10,7 +9,8 @@ import { AuthGuard } from './auth.service';
 import { SignupComponent } from './signup/signup.component';
 import { EmailComponent } from './email/email.component';
 import { MembersComponent } from './members/members.component';
-
+import { RulesComponent } from './rules/rules.component';
+import { CurrentGameComponent } from './current-game/current-game.component';
 
 const appRoutes: Routes = [
     {
@@ -24,7 +24,7 @@ const appRoutes: Routes = [
         component: PlayerListComponent
     },
     {
-        path: 'playerlists/:id',
+        path: 'players/:$key',
         component: ProfileComponent
     },
     { 
@@ -43,6 +43,13 @@ const appRoutes: Routes = [
          path: 'members',
          component: MembersComponent, 
          canActivate: [AuthGuard] 
+    {
+        path: 'rules',
+        component: RulesComponent
+    },
+    {
+        path: 'players/:$key/game',
+        component: CurrentGameComponent
     }
  ];
 
