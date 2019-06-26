@@ -36,3 +36,7 @@ Canvas component functionality gained witht the help of :
 
 Auth tutorial used 
 https://coursetro.com/posts/code/32/Create-a-Full-Angular-Authentication-System-with-Firebase
+
+Animation Resource
+CloudFlare
+https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js
