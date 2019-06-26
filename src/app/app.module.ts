@@ -28,6 +28,7 @@ import { Profile } from 'selenium-webdriver/firefox';
 import { ProfileComponent } from './profile/profile.component';
 import { CurrentGameComponent } from './current-game/current-game.component';
 import { PreviousComponent } from './previous/previous.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 export const firebaseConfig = {
@@ -53,7 +54,7 @@ export const firebaseConfig = {
     PlayerListComponent,
     ProfileComponent,
     CurrentGameComponent,
-    PreviousComponent
+    PreviousComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(firebaseConfig),
@@ -63,6 +64,7 @@ export const firebaseConfig = {
     FormsModule,
     HttpModule,
     routing,
+    BrowserAnimationsModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

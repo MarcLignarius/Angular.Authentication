@@ -3,6 +3,7 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuth} from 'angularfire2/auth';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import { Router } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { moveIn, fallIn, moveInLeft } from '../router.animations';
 
 @Component({

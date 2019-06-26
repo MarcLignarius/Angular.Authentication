@@ -4,6 +4,7 @@ import {AngularFireAuth} from 'angularfire2/auth';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import { Router } from '@angular/router';
 import { moveIn, fallIn } from '../router.animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @Component({
   selector: 'app-signup',
