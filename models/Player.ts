@@ -5,7 +5,8 @@ export class Player {
     public currentGame: Game;
     chain: Sheet[];
     sheets: Sheet[];
-    constructor(public name: string, public email: string, public playerNumber: number ) {  }
+
+    constructor( public name: string, public email: string) {  }
 
     createChainAndSheets() {
        for (let index = 1; index < this.currentGame.players. length; index++) {
