@@ -4,7 +4,7 @@ export class Game {
     constructor(public turns: number, public players: Player[]) {}
 
     getPlayerCount() {
-        this.turns
+        this.turns = this.players.length;
     }
 
     startPlayers() {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { PlayerService } from 'app/player.service';
 import { GameService } from "app/game.service";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @Component({
   selector: 'app-current-game',
