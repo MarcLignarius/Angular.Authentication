@@ -42,7 +42,8 @@ const appRoutes: Routes = [
     {
          path: 'members',
          component: MembersComponent, 
-         canActivate: [AuthGuard] 
+         canActivate: [AuthGuard]
+    }, 
     {
         path: 'rules',
         component: RulesComponent
