@@ -33,3 +33,6 @@ Canvas component functionality gained witht the help of :
 * _https://medium.com/@tarik.nzl/creating-a-canvas-component-with-free-hand-drawing-with-rxjs-and-angular-61279f577415_
 
 * _http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/#demo-complete_
+
+Auth tutorial used 
+https://coursetro.com/posts/code/32/Create-a-Full-Angular-Authentication-System-with-Firebase
