@@ -4,11 +4,14 @@ import {AngularFireAuth} from 'angularfire2/auth';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
+import { moveIn, fallIn } from '../router.animations';
 
 @Component({
   selector: 'app-email',
   templateUrl: './email.component.html',
-  styleUrls: ['./email.component.css']
+  styleUrls: ['./email.component.css'],
+  animations: [moveIn(), fallIn()],
+  host: {'[@moveIn]': ''}
 })
 export class EmailComponent implements OnInit {
 
