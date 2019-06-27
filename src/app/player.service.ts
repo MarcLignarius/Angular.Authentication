@@ -22,4 +22,10 @@ export class PlayerService {
   getPlayerById(playerId: string){
     return this.database.object('playerslist/' + playerId)
   }
+
+  getPlayerByEmail(){
+    this.getPlayers();
+    console.log(this.players);
+    
+  }
 }

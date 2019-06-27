@@ -6,12 +6,14 @@ import { Router } from '@angular/router';
 import { moveIn, fallIn } from '../router.animations';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { Form } from '@angular/forms';
-import { Player } from '../../../models/Player'
+import { Player } from '../../../models/Player';
+import { PlayerService } from '../player.service';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
+  providers: [ PlayerService ],
   animations: [moveIn(), fallIn()],
   host: {'[@moveIn]': ''}
 })
@@ -22,9 +24,8 @@ export class SignupComponent implements OnInit {
   error: any;
   email: string = '';
 
-  @Output() createPlayer = new EventEmitter();
 
-  constructor(public af: AngularFireAuth,private router: Router) {
+  constructor(public af: AngularFireAuth, private router: Router, private playerService: PlayerService) {
 
   }
 
@@ -33,14 +34,11 @@ export class SignupComponent implements OnInit {
       console.log(formData.value);
       this.af.auth.createUserWithEmailAndPassword(formData.value.email, formData.value.password).then(
         (success) => {
-        console.log(success);
         this.router.navigate(['/login'])
         var email = formData.value.email;
         var name = email.substring(0, email.lastIndexOf("@"));
         let newPlayer: Player = new Player(name, email);
-        this.createPlayer.emit(newPlayer);
-        console.log(newPlayer);
-        console.log(name);
+        this.playerService.addPlayer(newPlayer);
       }).catch(
         (err) => {
         console.log(err);
