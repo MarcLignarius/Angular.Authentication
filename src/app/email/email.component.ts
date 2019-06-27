@@ -22,7 +22,7 @@ export class EmailComponent implements OnInit {
   constructor(public af: AngularFireAuth,private router: Router) {
   this.af.authState.subscribe(auth => { 
     if(auth) {
-      this.router.navigateByUrl('/members');
+      this.router.navigateByUrl('/game-lobby');
     }
   });
 }
@@ -34,7 +34,7 @@ onSubmit(formData) {
     this.af.auth.signInWithEmailAndPassword(formData.value.email, formData.value.password).then(
       (success) => {
       console.log(success);
-      this.router.navigate(['/members']);
+      this.router.navigate(['/game-lobby']);
     }).catch(
       (err) => {
       console.log(err);
